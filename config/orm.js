@@ -24,15 +24,14 @@ let orm = {
       cb(result);
     });
   },
-  updateOne: function(table, objColVals, condition, cb) {
-    let queryString = `UPDATE ${table} SET (${objColVals} = ${boolean} WHERE ${condition});`;
+  updateOne: function(table, objColVals, boolean, condition, cb) {
+    let queryString = `UPDATE ${table} SET ${objColVals} = ${boolean} WHERE ${condition};`;
 
     console.log(queryString);
     connection.query(queryString, function(err, result) {
       if (err) {
         throw err;
       }
-
       cb(result);
     });
   },
