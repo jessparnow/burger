@@ -1,5 +1,5 @@
 // Import MySQL connection.
-const connection = require("../config/connection.js");
+let connection = require("../config/connection.js");
 
 // Object for all our SQL statement functions.
 let orm = {
@@ -25,7 +25,7 @@ let orm = {
     });
   },
   updateOne: function(table, objColVals, condition, cb) {
-    var queryString = `UPDATE ${table} SET (${objColVals} WHERE ${condition});`;
+    let queryString = `UPDATE ${table} SET (${objColVals} = ${boolean} WHERE ${condition});`;
 
     console.log(queryString);
     connection.query(queryString, function(err, result) {
@@ -37,7 +37,7 @@ let orm = {
     });
   },
   deleteOne: function(table, condition, cb) {
-    var queryString = `DELETE FROM ${table} WHERE ${condition}`;
+    let queryString = `DELETE FROM ${table} WHERE ${condition}`;
 
     connection.query(queryString, function(err, result) {
       if (err) {

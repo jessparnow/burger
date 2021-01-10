@@ -1,6 +1,6 @@
-const express = require("express");
-const router = express.Router();
-const burger = require("../models/burger");
+let express = require("express");
+let router = express.Router();
+let burger = require("../models/burger.js");
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
@@ -14,7 +14,7 @@ router.get("/", function(req, res) {
 });
 
 router.post("/api/burgers", function(req, res) {
- burger.createOne([
+ burger.insertOne([
     "burger_name"
   ], [
     req.body.burger_name

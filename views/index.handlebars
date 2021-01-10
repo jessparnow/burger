@@ -5,7 +5,7 @@
 <ul>
   {{#each borgors}}
     {{#unless devoured}}
-      {{> borgors/borgor-block devoured=true}}
+      {{> borgors/borgor-block}}
     {{/unless}}
   {{/each}}
 </ul>
@@ -15,7 +15,7 @@
 <ul>
   {{#each borgors}}
     {{#if devoured}}
-      {{> borgors/borgor-block devoured=false}}
+      {{> borgors/borgor-block}}
     {{/if}}
   {{/each}}
 </ul>
