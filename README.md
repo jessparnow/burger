@@ -14,6 +14,7 @@ A simple app using handlebars and MYSQL to connect the fron end and backend prot
 
 ## Link and Screenshots
 Here's a link to the deployed Heroku app: https://still-basin-42614.herokuapp.com/ <br>
+![Eat-Da-Burger](https://user-images.githubusercontent.com/71057611/104144300-53b59980-5388-11eb-8e39-319a5f6166b2.png)
 
 ## Installation
  Once you've cloned the repo navigate to the folder in which the project is located. Run <npm i mysql express express-handlebars>. <br>
