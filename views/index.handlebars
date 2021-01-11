@@ -1,33 +1,49 @@
-<h2>Add a Burger to Eat</h2>
+<section class="hero is-primary is-bold is-full">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Eat-Da-Burger!
+      </h1>
+    </div>
+  </div>
+</section>
+<h2 class="is-size-5">Add a Burger to Eat</h2>
+
 <form class="create-form">
 
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
+  <div class="field">
+    <div class="control">
+      <div class="form-group">
+        <input class="input is-primary" type="text" placeholder="Burger name" id="ca" name="name">
+      </div>
+    </div>
   </div>
 
-  <button type="submit">Add Burger</button>
-</form>
+  <button type="submit" class="button is-primary is-small">Add Burger</button>
+</form><br>
+<br>
 
-<h1>Eat-Da-Burger</h1>
+<div class="columns">
+  <div class="column is-half">
+    <h2 class="is-size-5">Burgers I Want</h2> <br>
 
-<h2>Burgers I Want</h2>
-
-<ul>
-  {{#each borgors}}
-    {{#unless devoured}}
+    <ul>
+      {{#each borgors}}
+      {{#unless devoured}}
       {{> borgors/burgerstoeat}}
-    {{/unless}}
-  {{/each}}
-</ul>
+      {{/unless}}
+      {{/each}}
+    </ul>
+  </div>
+  <div class="column is-half">
+    <h2 class="is-size-5">Burgers I Have Eaten</h2><br>
 
-<h2>Burgers I Have Eaten</h2>
-
-<ul>
-  {{#each borgors}}
-    {{#if devoured}}
+    <ul>
+      {{#each borgors}}
+      {{#if devoured}}
       {{> borgors/burgerseaten}}
-    {{/if}}
-  {{/each}}
-</ul>
-
+      {{/if}}
+      {{/each}}
+    </ul>
+  </div>
+</div>
